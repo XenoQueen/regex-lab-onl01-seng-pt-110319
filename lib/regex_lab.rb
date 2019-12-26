@@ -1,8 +1,11 @@
+
+require 'pry'
+
 def starts_with_a_vowel?(word)
-  if word.match(/\A[aeiou]/i) == NIL
-    return FALSE
+  if word.match(/\A[aeiou]/i) == nil
+    return false
   else
-    return TRUE
+    return true
   end
 end
 
@@ -23,7 +26,7 @@ def first_word_capitalized_and_ends_with_punctuation?(text)
 end
 
 def valid_phone_number?(phone)
-  if phone.match(/\(?[0-9]{3})\)?([ - ]?)([0-9]{3})([ - ]?)([0-9]{4})/) == nil
+  if phone.match(/\(?([0-9]{3})\)?([ -]?)([0-9]{3})([ -]?)([0-9]{4})/) == nil
     return false
   else
     return true
